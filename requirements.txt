@@ -7,3 +7,9 @@ scikit-learn
 networkx
 torch-geometric
 spconv-cu118
+matplotlib
+plotly
+
+ipykernel 
+ipython 
+ipywidgets
