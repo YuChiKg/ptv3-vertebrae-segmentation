@@ -15,13 +15,12 @@ This repository includes:
 - Custom dataloaders for the SpineDepth dataset
 - Training scripts for semantic segmentation
 - Minimal utilities required for reproduction
+- Best model configuration
 
 It **does not** include:
 - Full Pointcept framework
 - Raw datasets
-- Training logs or checkpoints
 
----
 
 ## Installation Set Up
 ```
@@ -73,7 +72,6 @@ A lightweight training script using a subset of the dataset is provided for fast
 
 ```
 python train_sem_seg_ptv3_num.py 
-
 ```
 During training:
 
@@ -116,5 +114,4 @@ Initial settings are in the origin code
   year={2021},
   publisher={MDPI}
 }
-
 ```
