@@ -2,7 +2,8 @@
 
 Adaptation of **Point Transformer v3 (PTv3)** for vertebrae segmentation on 3D point cloud data.
 
-This repository contains only the components required to reproduce the vertebrae segmentation experiments conducted during my Master’s research.  
+This repository contains only the components required to reproduce the vertebrae segmentation experiments.
+ 
 The core PTv3 implementation is adapted from the official Pointcept repository.
 
 👉 **Official PTv3 repository:**  
