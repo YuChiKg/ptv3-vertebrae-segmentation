@@ -3,8 +3,6 @@ tqdm
 trimesh
 pyquaternion
 pysdf
-addict
-timm
 scikit-learn
 networkx
 torch-geometric
