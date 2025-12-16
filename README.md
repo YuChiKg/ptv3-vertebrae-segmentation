@@ -15,7 +15,6 @@ This repository includes:
 - Custom dataloaders for the SpineDepth dataset
 - Training scripts for semantic segmentation
 - Minimal utilities required for reproduction
-- Best model configuration
 
 It **does not** include:
 - Full Pointcept framework
