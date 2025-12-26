@@ -94,6 +94,7 @@ Update log_train_dir and log_best_dir to point to your training outputs
 Training hyperparameters are defined in parse_args inside each training script.
 Initial settings are in the origin code
 
+---
 
 # Semi-Synthetic Data Creation
 
@@ -144,21 +145,32 @@ Each acquisition-date folder includes 2D radiographs and 3D geometry files.
 <path_to_Antonins_Dataset: Vertebrae>/
 ├── SJ0000270/
 │   ├── 2006-09-05/
-│   │   ├── SJ0000270_lat.jpg      # Lateral radiograph
-│   │   ├── SJ0000270_pa_0.jpg     # Posteroanterior (PA) radiograph
-│   │   ├── SJ0000270.o2           # 3D data file (format-specific)
-│   │   ├── SJ0000270.o3           # 3D data file (format-specific)
-│   │   └── SJ0000270.wrl          # 3D surface model (VRML)
+│   │   ├── ExtraireVertebresSTL.cmd      
+│   │   ├── SJ0000270_Vertebre_L1.stl      
+│   │   ├── SJ0000270_Vertebre_L2.stl     
+│   │   ├── SJ0000270_Vertebre_L3.stl          
+│   │   ├── SJ0000270_Vertebre_L4.stl           
+│   │   ├── SJ0000270_Vertebre_L5.stl      
+│   │   ├── SJ0000270_Vertebre_T1.stl     
+│   │   ├── SJ0000270_Vertebre_T2.stl          
+│   │   ├── SJ0000270_Vertebre_T3.stl  
+│   │   ├── SJ0000270_Vertebre_T4.stl      
+│   │   ├── SJ0000270_Vertebre_T5.stl     
+│   │   ├── SJ0000270_Vertebre_T6.stl          
+│   │   ├── SJ0000270_Vertebre_T7.stl  
+│   │   ├── SJ0000270_Vertebre_T8.stl      
+│   │   ├── SJ0000270_Vertebre_T9.stl     
+│   │   ├── SJ0000270_Vertebre_T10.stl          
+│   │   ├── SJ0000270_Vertebre_T11.stl  
+│   │   ├── SJ0000270_Vertebre_T12.stl  
+│   │   ├── SJ0000270.o3 
+│   │   └── trace.log          
 │   ├── 2006-12-12/
-│   │   ├── SJ0000270_lat.jpg
-│   │   ├── SJ0000270_pa_0.jpg
-│   │   ├── SJ0000270.o2
-│   │   ├── SJ0000270.o3
-│   │   └── SJ0000270.wrl
+│   │   ├── ...
 │
 ├── SJ0000285/
 ├── SJ0000321/
-├── ..
+├── ...
 ```
 
 ## Annotate generated point clouds and Assign surgical colors
