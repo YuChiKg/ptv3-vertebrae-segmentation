@@ -115,11 +115,12 @@ preprocess_o3file.ipynb
 This notebook will generate an SJxxxxxxx.json metadata file inside each acquisition-date folder, which is required for subsequent processing steps.
 
 ## Dataset Directory Structure
+There are two folders: o3 and Vertebrae in Antonin's Dataset
 
 Each subject (SJxxxxx) may contain multiple acquisition dates.
 Each acquisition-date folder includes 2D radiographs and 3D geometry files.
 ```
-<path_to_Antonins_Dataset>/
+<path_to_Antonins_Dataset: o3>/
 ├── SJ0000270/
 │   ├── 2006-09-05/
 │   │   ├── SJ0000270_lat.jpg      # Lateral radiograph
@@ -138,6 +139,34 @@ Each acquisition-date folder includes 2D radiographs and 3D geometry files.
 ├── SJ0000321/
 ├── ...
 ```
+
+```
+<path_to_Antonins_Dataset: Vertebrae>/
+├── SJ0000270/
+│   ├── 2006-09-05/
+│   │   ├── SJ0000270_lat.jpg      # Lateral radiograph
+│   │   ├── SJ0000270_pa_0.jpg     # Posteroanterior (PA) radiograph
+│   │   ├── SJ0000270.o2           # 3D data file (format-specific)
+│   │   ├── SJ0000270.o3           # 3D data file (format-specific)
+│   │   └── SJ0000270.wrl          # 3D surface model (VRML)
+│   ├── 2006-12-12/
+│   │   ├── SJ0000270_lat.jpg
+│   │   ├── SJ0000270_pa_0.jpg
+│   │   ├── SJ0000270.o2
+│   │   ├── SJ0000270.o3
+│   │   └── SJ0000270.wrl
+│
+├── SJ0000285/
+├── SJ0000321/
+├── ..
+```
+
+## Annotate generated point clouds and Assign surgical colors
+We provide a Python script designed to annotate generated semi-synthetic point clouds and assigned real surgical colors.
+
+- Script: `assign_color.py`
+- Purpose: Generate annotated point clouds -> saved as .npy files
+
 
 
 # Citation
