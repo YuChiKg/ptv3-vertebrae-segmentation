@@ -94,6 +94,54 @@ Update log_train_dir and log_best_dir to point to your training outputs
 Training hyperparameters are defined in parse_args inside each training script.
 Initial settings are in the origin code
 
+
+# Semi-Synthetic Data Creation
+
+We provide a Python script designed to be executed within **Blender** to generate semi-synthetic point clouds sampled from 3D surface meshes with tagged points.
+
+- Script: `tag_points.py`, `main_process.py`
+- Purpose: create tag points in json file -> generate point clouds -> saved as .ply files
+
+The generated point clouds can be further processed using the provided preprocessing scripts.
+---
+
+## Data Preparation for Semi-Synthetic Data (Antonin’s Dataset)
+
+Before running the preprocessing pipeline, ensure that the dataset follows the directory structure described below.
+
+After verification, run:
+
+```bash
+preprocess_o3file.ipynb
+```
+This notebook will generate an SJxxxxxxx.json metadata file inside each acquisition-date folder, which is required for subsequent processing steps.
+
+## Dataset Directory Structure
+
+Each subject (SJxxxxx) may contain multiple acquisition dates.
+Each acquisition-date folder includes 2D radiographs and 3D geometry files.
+```
+<path_to_Antonins_Dataset>/
+├── SJ0000270/
+│   ├── 2006-09-05/
+│   │   ├── SJ0000270_lat.jpg      # Lateral radiograph
+│   │   ├── SJ0000270_pa_0.jpg     # Posteroanterior (PA) radiograph
+│   │   ├── SJ0000270.o2           # 3D data file (format-specific)
+│   │   ├── SJ0000270.o3           # 3D data file (format-specific)
+│   │   └── SJ0000270.wrl          # 3D surface model (VRML)
+│   ├── 2006-12-12/
+│   │   ├── SJ0000270_lat.jpg
+│   │   ├── SJ0000270_pa_0.jpg
+│   │   ├── SJ0000270.o2
+│   │   ├── SJ0000270.o3
+│   │   └── SJ0000270.wrl
+│
+├── SJ0000285/
+├── SJ0000321/
+├── ...
+```
+
+
 # Citation
 ```
 @inproceedings{wu2024point,
