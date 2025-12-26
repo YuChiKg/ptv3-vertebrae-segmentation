@@ -102,8 +102,6 @@ We provide a Python script designed to be executed within **Blender** to generat
 - Script: `tag_points.py`, `main_process.py`
 - Purpose: create tag points in json file -> generate point clouds -> saved as .ply files
 
-The generated point clouds can be further processed using the provided preprocessing scripts.
----
 
 ## Data Preparation for Semi-Synthetic Data (Antonin’s Dataset)
 
